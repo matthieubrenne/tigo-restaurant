@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
-
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Philosopher&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet"> 
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <div class="container">
+                <nav class="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
+                    <div class="container-fluid">
+                        <img class="logo" src={{ asset ('assets/img/tigo_logo.png') }} alt="logo">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('home')}}"><span class="span-nav">A</span>ccueil</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"><span class="span-nav">C</span>arte</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"><span class="span-nav">G</span>allerie</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#"><span class="span-nav">C</span>ontactez-nous</a>
+                                </li>
+                                {% if app.user %}
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('account') }}"><span class="span-nav">M</span>on compte <small>({{ app.user.firstname }})</small></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('app_logout') }}"><span class="span-nav">D</span>éconnexion</a>
+                                </li>
+                                {% else %}
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('app_login') }}"><span class="span-nav">C</span>onnexion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('register') }}"><span class="span-nav">I</span>nscription</a>
+                                </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main>
+
+        
+            <div class="container mt-5 container-custom">
+                {% block content %}
+                {% endblock %}
+            </div>
+    
+    
+            
+
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer-custom text-center">
+            <p>&copy; Tigo restaurant</p>
+        </footer>
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
     </body>
 </html>

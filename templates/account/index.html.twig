@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte - TIGO restaurant{% endblock %}
+
+{% block content %}
+    <h1><span>M</span>on compte</h1>
+    <h6 class="text-center mt-3 mb-3">Bienvenue {{ app.user.firstname }} dans votre compte.</h6> 
+    <p class="text-center">C'est ici que vous allez pouvoir gérer toutes vos informations personnelles.</p> 
+    <hr>
+    <a href="{{ path('account_password') }}" class="a-password"><span>M</span>odifier mon mot de passe</a> 
+    <hr>  
+{% endblock %}

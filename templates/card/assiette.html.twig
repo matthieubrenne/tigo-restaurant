@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Assiettes - TIGO restaurant{% endblock %}
+
+{% block content %}
+    
+    <h2 class="card-title"><span>N</span>os assiettes</h2>
+    <div class="row" product-container>
+        {% for product in products %}
+            {% if product.category == 'assiette'%}
+                <div class="col-md-4">
+                    <div class="product-item text-center">
+                        <h4 class="product-name">{{ product.name }}</h4>
+                        <p class="product-description">{{ product.description}}</p>
+                        <p class="product-price"><span class="span-product">Seul : </span>{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
+                        <p class="product-price"><span class="span-product">Menu 33cl NA : </span>{{ (product.price / 100 + 2.50)|number_format(2,',','.') }} €</p>
+                        <p class="product-price"><span class="span-product">Menu Bière 25cl : </span>{{ (product.price / 100 + 3.50)|number_format(2,',','.') }} €</p>
+                    </div>
+                </div>
+            {% endif %}    
+        {% endfor %}
+    </div>
+    <a href="{{ path('card') }}">
+        <h2 class="card-title"><span>R</span>etour au menu</h2>
+    </a>
+
+{% endblock %}

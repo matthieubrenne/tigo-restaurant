@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Notre carte - TIGO restaurant{% endblock %}
+
+{% block content %}
+    <h1 class="card-title-3">La <span>Carte</span></h1>
+
+    <!-- filtre -->
+    <section class="product-filter">
+            <a href="{{ path('kebab') }}" class="category">
+                <h3 class="category-title"><span>N</span>os kebabs</h3>
+                <img src={{ asset ('assets/img/kebab.png') }} alt="kebab" class="category-img">
+            </a>
+            <a href="{{ path('assiette') }}" class="category">
+                <h3 class="category-title assiette-title"><span>N</span>os assiettes</h3>
+                <img src={{ asset ('assets/img/assiette.png') }} alt="assiette" class="category-img">
+            </a>
+            <a href="{{ path('sandwich') }}" class="category">
+                <h3 class="category-title"><span>N</span>os sandwichs</h3>
+                <img src={{ asset ('assets/img/sandwich.png') }} alt="sandwich" class="category-img">
+            </a>
+            <a href="{{ path('burger') }}" class="category">
+                <h3 class="category-title"><span>N</span>os burger</h3>
+                <img src={{ asset ('assets/img/burger.png') }} alt="burger" class="category-img">
+            </a>
+            <a href="{{ path('snacking') }}" class="category">
+                <h3 class="category-title"><span>S</span>nacking</h3>
+                <img src={{ asset ('assets/img/snacking.png') }} alt="snacking" class="category-img">
+            </a>
+            <a href="{{ path('kids_meal') }}" class="category">
+                <h3 class="category-title"><span>M</span>enus enfant</h3>
+                <img src={{ asset ('assets/img/menu-enfant.png') }} alt="menu-child" class="category-img">
+            </a>
+    </section>
+{% endblock %}

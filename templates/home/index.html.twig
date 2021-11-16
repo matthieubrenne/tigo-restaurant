@@ -3,5 +3,36 @@
 {% block title %}Accueil - TIGO restaurant{% endblock %}
 
 {% block content %}
+
+    <section class="menu-carousel">
+        <div id="carouselMenu" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset ('assets/img/Menu Kebab.png') }}" class="d-block w-100" alt="Menu kebab">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset ('assets/img/Menu Assiette.png') }}" class="d-block w-100" alt="Menu assiette">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset ('assets/img/Menu Burger.png') }}" class="d-block w-100" alt="Menu burger">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="reviews">
+        <div id="carouselReviews" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{{ asset ('assets/img/avis1.png') }}" class="d-block w-100" alt="avis 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset ('assets/img/avis1.png') }}" class="d-block w-100" alt="avis 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{{ asset ('assets/img/avis1.png') }}" class="d-block w-100" alt="avis 3">
+                </div>
+            </div>
+        </div>
+    </section>
     
 {% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Menu enfant - TIGO restaurant{% endblock %}
+
+{% block content %}
+
+    <h2 class="card-title"><span>N</span>os menus enfant</h2>
+    <div class="row" product-container>
+        {% for product in products %}
+            {% if product.category == 'menu enfant'%}
+                <div class="col-md-4">
+                    <div class="product-item text-center">
+                        <h4 class="product-name">{{ product.name }}</h4>
+                        <p class="product-description">{{ product.description}}</p>
+                        <p class="product-price price-mkids">{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
+                    </div>
+                </div>
+            {% endif %}    
+        {% endfor %}
+    </div>
+
+    <a href="{{ path('card') }}">
+        <h2 class="card-title"><span>R</span>etour au menu</h2>
+    </a>
+
+{% endblock %}

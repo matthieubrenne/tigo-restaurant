@@ -12,7 +12,9 @@
                     <div class="product-item text-center">
                         <h4 class="product-name">{{ product.name }}</h4>
                         <p class="product-description">{{ product.description}}</p>
-                        <p class="product-price price-mkids">{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
+                        <div class="price">
+                            <p class="product-price price-mkids">{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
+                        </div>
                     </div>
                 </div>
             {% endif %}    

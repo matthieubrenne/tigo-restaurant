@@ -8,24 +8,38 @@
     
     <!-- filtre -->
     <section class="product-filter">
-            <a href="{{ path('kebab') }}" class="category">
-                <img src={{ asset ('assets/img/Kebab.png') }} alt="kebab" class="category-img">
-            </a>
-            <a href="{{ path('assiette') }}" class="category">
-                <img src={{ asset ('assets/img/Assiette.png') }} alt="assiette" class="category-img">
-            </a>
-            <a href="{{ path('sandwich') }}" class="category">
-                <img src={{ asset ('assets/img/Sandwich.png') }} alt="sandwich" class="category-img">
-            </a>
-            <a href="{{ path('burger') }}" class="category">
-                <img src={{ asset ('assets/img/Burger.png') }} alt="burger" class="category-img">
-            </a>
-            <a href="{{ path('snacking') }}" class="category">
-                <img src={{ asset ('assets/img/Snacking.png') }} alt="snacking" class="category-img">
-            </a>
-            <a href="{{ path('kids_meal') }}" class="category">
-                <img src={{ asset ('assets/img/Menu-enfant.png') }} alt="menu-child" class="category-img">
-            </a>
+        <div class="row" product-container>
+            <div class="col-md-4">
+                <a href="{{ path('kebab') }}" class="category">
+                    <img src={{ asset ('assets/img/Kebab.png') }} alt="kebab" class="category-img">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ path('assiette') }}" class="category">
+                    <img src={{ asset ('assets/img/Assiette.png') }} alt="assiette" class="category-img">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ path('sandwich') }}" class="category">
+                    <img src={{ asset ('assets/img/Sandwich.png') }} alt="sandwich" class="category-img">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ path('burger') }}" class="category">
+                    <img src={{ asset ('assets/img/Burger.png') }} alt="burger" class="category-img">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ path('snacking') }}" class="category">
+                    <img src={{ asset ('assets/img/Snacking.png') }} alt="snacking" class="category-img">
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ path('kids_meal') }}" class="category">
+                    <img src={{ asset ('assets/img/Menu-enfant.png') }} alt="menu-child" class="category-img">
+                </a>
+            </div>
+        </div>
     </section>
 
 {% endblock %}

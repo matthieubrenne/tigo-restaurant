@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+} 
+
+body {
+    background-image: url(/public/assets/img/white-wooden-textures.jpg);
+    background-repeat: round;
+    background-attachment: fixed;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+p,a {
+    font-family: 'Nunito', sans-serif;
+}
+
+span {
+    color: red;
+}
+
+main {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+a:active {
+    outline: black;
+}
+
+a:hover {
+    color: red;
+}

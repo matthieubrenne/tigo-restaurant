@@ -12,9 +12,11 @@
                     <div class="product-item text-center">
                         <h4 class="product-name">{{ product.name }}</h4>
                         <p class="product-description">{{ product.description}}</p>
-                        <p class="product-price"><span class="span-product">Seul : </span>{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
-                        <p class="product-price"><span class="span-product">Menu 33cl NA : </span>{{ (product.price / 100 + 2.50)|number_format(2,',','.') }} €</p>
-                        <p class="product-price"><span class="span-product">Menu Bière 25cl : </span>{{ (product.price / 100 + 3.50)|number_format(2,',','.') }} €</p>
+                        <div class="price">
+                            <p class="product-price"><span class="span-product">Seul : </span>{{ (product.price / 100)|number_format(2,',','.') }} €</p>  
+                            <p class="product-price"><span class="span-product">Menu 33cl NA : </span>{{ (product.price / 100 + 2.50)|number_format(2,',','.') }} €</p>
+                            <p class="product-price"><span class="span-product">Menu Bière 25cl : </span>{{ (product.price / 100 + 3.50)|number_format(2,',','.') }} €</p>
+                        </div>
                     </div>
                 </div>
             {% endif %}    

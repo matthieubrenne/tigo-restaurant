@@ -1,0 +1,139 @@
+.menu-carousel {
+    margin-top: -24px;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.logo-facebook {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: auto;
+}
+
+.social {
+    background-color: black;
+    padding: 15px;
+    margin-bottom: -60px;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-top: 50px;
+}
+
+.social-title {
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
+
+.schedule {
+    border-radius: 20px;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.card-img-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.history {
+    margin-bottom: 100px;
+}
+
+.history-description {
+    font-style: italic;
+    font-size: 18px;
+}
+
+.history-span {
+    color: red;
+    font-weight: bold;
+}
+
+.reviews {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    border-radius: 10%;
+    box-shadow: 10px 10px 0px -3px #878787;
+    margin-bottom: 100px;
+}
+
+.home-contact {
+    background-color: black;
+    border-radius: 20px;
+    width: 70%;
+    margin: auto;
+    box-shadow: 10px 10px 0px -3px #878787;
+}
+
+.phone-number {
+    font-size: 18px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+// desktop //
+
+@media screen and (min-width: 768px) {
+
+    .menu-carousel {
+        background-color: black;
+        margin-left: -210px;
+        margin-right: -220px;
+        height: 390px;
+        margin-bottom: 200px;
+        margin-top: -50px;
+    }
+
+    .carousel-item1 {
+        width: 40%;
+        margin-left: 350px;
+    }
+
+    .history-title {
+        font-size: 30px;
+    }
+    
+    .history-description {
+        font-style: italic;
+        font-size: 20px;
+    }
+
+    .history-reviews {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        margin-bottom: 100px;
+    }
+
+    .reviews {
+        width: 30%;
+        height: 450px;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .history {
+        width: 50%;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    .table-schedule {
+        text-align: center;
+    }
+
+    .home-contact {
+        width: 20%;
+    }
+
+    .social {
+        margin-left: -220px;
+        margin-right: -220px;
+    }
+}

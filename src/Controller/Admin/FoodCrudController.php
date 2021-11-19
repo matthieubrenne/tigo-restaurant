@@ -26,11 +26,11 @@ class FoodCrudController extends AbstractCrudController
         return [
             TextField::new('name', 'Nom'),
             SlugField::new('slug')->setTargetFieldName('name'),
-            ImageField::new('illustration')
-                ->setBasePath('uploads/')
-                ->setUploadDir('public/uploads/')
-                ->setUploadedFileNamePattern('[randomhash].[extension]')
-                ->setRequired(false),
+            // ImageField::new('illustration')
+            //     ->setBasePath('uploads/')
+            //     ->setUploadDir('public/uploads/')
+            //     ->setUploadedFileNamePattern('[randomhash].[extension]')
+            //     ->setRequired(false),
             TextareaField::new('description', 'Description'),
             MoneyField::new('price', 'Prix')->setCurrency('EUR'),
             AssociationField::new('category', 'Catégorie'),

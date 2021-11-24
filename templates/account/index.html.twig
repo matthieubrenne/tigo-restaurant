@@ -6,9 +6,9 @@
     <h1><span>M</span>on compte</h1>
     <h6 class="text-center mt-3 mb-3">Bienvenue {{ app.user.firstname }} dans votre compte.</h6> 
     <hr>
-    {# {% if is_granted('ROLE_ADMIN')%} #}
+    {% if is_granted('ROLE_ADMIN')%}
     <small><a href="/admin" class="a-password"><span>V</span>ous êtes un administrateur, accédez au Backoffice ?</a></small><br>
-    {# {% endif %} #}
+    {% endif %}
     <a href="{{ path('account_password') }}" class="a-password"><span>M</span>odifier mon mot de passe</a> 
     <hr>  
 {% endblock %}

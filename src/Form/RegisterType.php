@@ -49,7 +49,14 @@ class RegisterType extends AbstractType
                     new NotBlank(),
                 ]
             ])
-            ->add('roles')
+            ->add('roles', ChoiceType::class, [
+                'choices'  => [
+                    'admin' => 'ROLE_ADMIN',
+                    'emprunteur' => 'ROLE_EMPRUNTEUR',
+                ],
+                'multiple' => true,
+                'expanded' => true,
+            ])
             ->add('phone', TextType::class, [
                 'label' => 'Téléphone',
                 'constraints' => [

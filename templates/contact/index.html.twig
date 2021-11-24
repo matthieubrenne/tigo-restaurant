@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter - TIGO restaurant{% endblock %}
+
+{% block content %}
+
+    <h1 class="card-home-title text-center">Nous<span> contacter</span></h1>
+    {% for message in app.flashes('notice') %}
+        <div class="alert alert-info">{{ message }}</div>
+    {% endfor %}
+    <div class="row">
+        <div class="col-md-8">
+            {{ form(form) }}
+        </div>
+        <div class="col-md-4 text-center">
+            <h3><span>T</span>igo restaurant</h3>
+            <p>33 r Jules Guesde, 62410 WINGLES</p>
+            <p>03 21 72 23 49</p>
+            <p>adresse email a rajouter</p>
+            <a href="https://www.facebook.com/Tigo-Wingles-776717799165064/?ref=page_internal">
+                <img src="{{ asset ('assets/img/facebook.png') }}" alt="facebook" class="logo-facebook">
+            </a>
+        </div>
+    </div>
+{% endblock %}

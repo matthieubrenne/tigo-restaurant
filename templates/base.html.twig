@@ -34,6 +34,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{ path('gallery') }}"><span class="span-nav">G</span>allerie</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="{{ path('contact') }}"><span class="span-nav">N</span>ous contacter</a>
+                                </li>
                                 {% if app.user %}
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{ path('account') }}"><span class="span-nav">M</span>on compte <small>({{ app.user.firstname }})</small></a>
@@ -48,11 +51,6 @@
                                 {# <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="{{ path('register') }}"><span class="span-nav">I</span>nscription</a>
                                 </li> #}
-                                {% endif %}
-                                {% if is_granted('ROLE_ADMIN')%}
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="{{ path('admin') }}"><span class="span-nav">Administration</span></a>
-                                </li>
                                 {% endif %}
                             </ul>
                         </div>

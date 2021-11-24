@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Page introuvable - TIGO restaurant{% endblock %}
+
+{% block content %}
+    <div class="block-small">
+        <h2>Page introuvable</h2>
+        <p>Désolé cette page ne semble pas accessible pour le moment.</p>
+        <a href="{{ path('home') }}" class="btn btn-dark">Revenir à l'accueil</a>
+    </div>
+{% endblock %}

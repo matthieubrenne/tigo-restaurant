@@ -4,7 +4,6 @@ namespace App\Form;
 
 use App\Entity\User;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
@@ -49,14 +48,6 @@ class RegisterType extends AbstractType
                     ]),
                     new NotBlank(),
                 ]
-            ])
-            ->add('roles', ChoiceType::class, [
-                'choices'  => [
-                    'admin' => 'ROLE_ADMIN',
-                    'emprunteur' => 'ROLE_EMPRUNTEUR',
-                ],
-                'multiple' => true,
-                'expanded' => true,
             ])
             ->add('phone', TextType::class, [
                 'label' => 'Téléphone',

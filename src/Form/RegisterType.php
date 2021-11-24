@@ -49,6 +49,7 @@ class RegisterType extends AbstractType
                     new NotBlank(),
                 ]
             ])
+            ->add('roles')
             ->add('phone', TextType::class, [
                 'label' => 'Téléphone',
                 'constraints' => [

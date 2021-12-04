@@ -8,21 +8,13 @@
 
     <div class="lightbox-gallery">
         <div class="container">
+            
             <div class="row photos">
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo1.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo1.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo2.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo2.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo3.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo3.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo4.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo4.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo5.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo5.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo6.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo6.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo7.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo7.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo8.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo8.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo9.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo9.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo10.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo10.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo11.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo11.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo12.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo12.jpg') }}"></a></div>
-                <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ asset ('assets/img/photo13.jpg') }}" data-lightbox="photos"><img class="img-fluid" src="{{ asset ('assets/img/photo13.jpg') }}"></a></div>
+                {% for images in image %}
+                    <div class="col-sm-6 col-md-4 col-lg-3 item"><a href="{{ vich_uploader_asset(images, 'imageFile') }}" data-lightbox="photos"><img class="img-fluid" src="{{ vich_uploader_asset(images, 'imageFile') }}"></a></div>
+                {% endfor %}
             </div>
+            
         </div>
     </div>
 

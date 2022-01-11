@@ -25,7 +25,7 @@ class ContactType extends AbstractType
             ->add('email', EmailType::class , [
                 'label' => 'Votre email',
             ])
-            ->add('content', TextareaType::class , [
+            ->add('message', TextareaType::class , [
                 'label' => 'Votre message',
             ])
             ->add('submit', SubmitType::class , [

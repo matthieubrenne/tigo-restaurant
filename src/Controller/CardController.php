@@ -24,6 +24,7 @@ class CardController extends AbstractController
     {
         $products = $this->entityManager->getRepository(Food::class)->findAll();
 
+
         return $this->render('card/index.html.twig', [
             'products' => $products
         ]);
